@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/*
+Color de fondo de la página: #EDDCC1;
+Color de texto: black;
+
+Color de fondo de la barra de navegación superior: white;
+
+Color fondo verde 1: #328532;
+Color fondo verde 2: #66E566;
+
+Color de "Cuidemos de ti y de tu familia": #20272E;
+
+Tipo de letra: Poppins, disponible en Google Fonts
+*/
+
+:root {
+    /* Color de fondo de la página */
+    --bgcolor-page: #EDDCC1;
+
+    /* Color de fondo de la barra de navegación superior */
+    --bgcolor-1: #FFF;
+    /* Color de fondo panel "Servicios" */
+    --bgcolor-2: #20272E;
+
+    /* Color fondo verde 1 */
+    --color-1: #328532;
+    /* Color fondo verde 2 */
+    --color-2: #66E566;
+
+    /* Color del texto */
+    --text-color-1: #000;
+    /* Color de "Cuidamos de ti y de tu familia" */
+    --text-color-2: #616161;
+    /* Color del texto del panel "Servicios" y pie de página */
+    --text-color-3: #FFF;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background:  var(--bgcolor-page);
+    color: var(--text-color-1);
+    margin: 0;
+}
+
+/*-------------------------------------HEADER-------------------------------------*/
+header{
+    background: var(--bgcolor-1);
+
+}
+
+header > h1 {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+header > h1 > a > span {
+    color: var(--color-1);
+}
+
+header > h1 > a {
+  word-spacing: -0.2em;
+}
+
+p.eslogan {
+    color: var(--text-color-2);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+}
+
+/*------------------------------MAIN------------------------------------*/
+
+main > h2 {
+    font-size: 3em;
+}
+
+main > h2 > span {
+    color: var(--color-1);
+}
+
+a {
+    color: var(--text-color-1);
+    text-decoration: none;
+}
+
+a.actual {
+    font-weight: bold;
+}
+
+
+#servicios {
+    background: var(--bgcolor-2);
+    color: var(--text-color-3);
+    
+}
+
+#testimonios {
+    background: var(--color-1);
+}
+
+#testimonios ul {
+    margin-top: 0;
+}
+
+#testimonios li {
+    background: var(--color-2);
+    color: var(--text-color-2);
+}
+/* ----------------------------FOOTER -------------------------- */
+footer {
+    background: var(--color-1);
+    color: var(--text-color-3);
+    
+}
+
+footer a {
+    color: var(--text-color-3);
+}
+
+footer ul {
+    margin-bottom: 0;
+}
+
+/*-----------------------------BOTONES-----------------------------*/
+
+.boton-principal {
+    background-color: var(--color-1);
+    color: var(--bgcolor-1);
+    border: 3px solid var(--color-1);
+    border-radius: 5em;
+    font-weight: bold;
+    font-size: 1.4em;
+    padding: .5em 1.1em;
+    display: inline-block;
+
+}
+
+.boton-principal:hover {
+    background-color: var(--bgcolor-1);
+    color: var(--color-1);
+
+}
+
+.boton-invertido {
+    color: var(--color-1);
+    background-color: var(--bgcolor-1);
+    border: 3px solid var(--color-1);
+    border-radius: 5em;
+    font-weight: bold;
+    
+    padding: .2em 0.8em;
+    
+
+}
+
+.boton-invertido:hover {
+    color: var(--bgcolor-1);
+    background-color: var(--color-1);
+
+}
+
+
+/*-----------------------------------------LISTAS-----------------------------------*/
+
+header ul, #servicios ul, #testimonios ul, footer ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/*------------------------------------------DISEÑO FLEX------------------------------*/
+
+header ul, #testimonios ul, footer ul {
+
+    display: flex;
+    place-content: space-between;
+}
+
+header {
+
+    display: flex;
+    place-content: space-between;
+
+}
+
+header, main, aside, footer {
+    padding: 1em;
+}
+
+/*----------------------------------------IMAGENES--------------------------*/
+
+#testimonios li img {
+    width: 5em;
+    height: 5em;
+}
+
+#servicios ul {
+
+    margin-left: 2em;
+    position: relative;
+
+}
+
+#servicios ul li:before {
+    content: '';
+    position: absolute;
+    left: -2em;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/corazon-3d2.png");
+    background-size: contain;
+} 
